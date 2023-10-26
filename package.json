@@ -1,0 +1,65 @@
+{
+  "name": "shopify-nextjs-prisma-app",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "Harshdeep Singh Hura (https://harshdeephura.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinngh/shopify-nextjs-prisma-app.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "pretty": "prettier --write ./",
+    "update": "ncu -u",
+    "update:url": "node _developer/updateDashboard.js",
+    "ngrok:auth": "ngrok authtoken <auth-token-goes-here>",
+    "ngrok": "ngrok http 3000",
+    "-----> Shopify <-----": "",
+    "g:install": "npm i -g @shopify/app@latest @shopify/cli@latest",
+    "shopify": "shopify",
+    "-----> Database <-----": "",
+    "pg:create": "mkdir database; pg_ctl -D database init",
+    "pg:start": "pg_ctl -D database start",
+    "pg:stop": "pg_ctl -D database stop",
+    "-----> Prisma <-----": "",
+    "prisma": "npx prisma",
+    "prisma:push": "npx prisma db push",
+    "prisma:pull": "npx prisma db pull",
+    "-----> Reserved Scripts <-----": "",
+    "prepare": "npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.4.2",
+    "@shopify/polaris": "^12.0.0",
+    "@shopify/shopify-api": "^8.0.1",
+    "cryptr": "^6.3.0",
+    "init": "^0.1.2",
+    "next": "13.5.5",
+    "next-api-middleware": "^2.0.1",
+    "pg": "^8.11.3",
+    "pg-ctl": "^2.1.0",
+    "prisma": "^5.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@shopify/cli-kit": "^3.49.7",
+    "dotenv": "^16.3.1",
+    "ngrok": "^5.0.0-beta.2",
+    "npm-check-updates": "^16.14.6",
+    "prettier": "^3.0.3"
+  },
+  "description": "An embedded app starter template to get up and ready with Shopify app development with Next.js and Prisma.",
+  "bugs": {
+    "url": "https://github.com/kinngh/shopify-nextjs-prisma-app/issues"
+  },
+  "homepage": "https://github.com/kinngh/shopify-nextjs-prisma-app#readme",
+  "main": "middleware.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
